@@ -1,226 +1,147 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+/* --- LUXURY ELEGANT GOLD & BLACK THEME --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#eef2ff,#f8f9ff,#ffffff);
-    color:#222;
+body { 
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #0b0b0b; 
+    background-image: radial-gradient(circle at 50% 50%, #161616 0%, #0b0b0b 100%);
+    color: #e5e5e5; 
+    line-height: 1.8; 
+    padding: 60px 20px; 
 }
 
-header{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 9%;
-    position:fixed;
-    top:0;
-    left:0;
-    backdrop-filter:blur(18px);
-    background:rgba(255,255,255,.6);
-    z-index:999;
+/* Bingkai Utama Berwarna Emas Mewah */
+.container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background: #111111; 
+    padding: 50px 40px; 
+    border-radius: 4px; 
+    border: 1px solid #d4af37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.1);
+    position: relative;
 }
 
-.logo{
-    font-size:34px;
-    color:#4f7cff;
+.container::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    pointer-events: none;
 }
 
-nav a{
-    text-decoration:none;
-    margin-left:35px;
-    color:#555;
-    font-weight:500;
-    transition:.3s;
+/* Header & Komponen Foto Profil */
+.profile-header { 
+    text-align: center; 
+    margin-bottom: 45px; 
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3); 
+    padding-bottom: 30px; 
 }
 
-nav a:hover{
-    color:#4f7cff;
+/* Frame Foto Mewah Lingkaran Emas */
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    /* Memanggil file bernama foto.jpg di dalam folder repository */
+    background-image: url('foto.jpg'); 
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
-.hero{
-    width:100%;
-    min-height:100vh;
-    display:grid;
-    grid-template-columns:1fr 1.3fr 1fr;
-    gap:45px;
-    align-items:center;
-    padding:120px 9% 70px;
+.profile-header h1 { 
+    color: #d4af37;
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem; 
+    font-weight: 400; 
+    font-style: italic; 
+    letter-spacing: 2px;
 }
 
-.left{
-    display:flex;
-    justify-content:center;
+.profile-header p { 
+    color: #a99260; 
+    font-size: 0.85rem; 
+    margin-top: 10px; 
+    letter-spacing: 3px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
 }
 
-.left img{
-
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:50%;
-    border:10px solid white;
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.12);
-
+/* Kotak Bagian (Section Box) */
+.section-box { 
+    background: #151515; 
+    padding: 30px; 
+    margin-bottom: 30px; 
+    border: 1px solid #222222;
+    border-top: 2px solid #d4af37; 
+    transition: all 0.4s ease;
 }
 
-.badge{
-
-display:inline-block;
-
-background:#4f7cff;
-color:white;
-
-padding:8px 18px;
-
-border-radius:50px;
-
-margin-bottom:15px;
-
-font-size:14px;
-
+.section-box:hover { 
+    background: #181818;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.05);
+    border-top-color: #f3e5ab;
 }
 
-.center h1{
-
-font-size:60px;
-
-font-weight:700;
-
-margin-bottom:10px;
-
+h2 { 
+    color: #d4af37; 
+    font-size: 1.3rem; 
+    margin-bottom: 20px; 
+    font-weight: 400; 
+    font-style: italic; 
+    letter-spacing: 1px;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.2);
+    padding-bottom: 5px;
 }
 
-.center h1 span{
-
-color:#4f7cff;
-
+/* List Identitas Diri */
+.identity-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px; 
+    list-style: none; 
 }
 
-.center h2{
-
-font-size:28px;
-
-color:#4f7cff;
-
-margin-bottom:15px;
-
+.identity-list li { 
+    background: #111111; 
+    padding: 15px; 
+    border: 1px solid #222222;
 }
 
-.center p{
-
-line-height:1.9;
-
-color:#666;
-
-margin-bottom:25px;
-
+.identity-list strong { 
+    color: #a99260; 
+    display: block; 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 5px;
 }
 
-.social{
-
-display:flex;
-
-gap:15px;
-
+.identity-list span { 
+    color: #ffffff; 
+    font-weight: 400; 
+    font-size: 1.1rem; 
+    font-style: italic; 
 }
 
-.social a{
-
-width:52px;
-
-height:52px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:white;
-
-border-radius:15px;
-
-text-decoration:none;
-
-font-size:22px;
-
-color:#4f7cff;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.social a:hover{
-
-background:#4f7cff;
-
-color:white;
-
-transform:translateY(-5px);
-
-}
-
-.info-card{
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 10px 35px rgba(0,0,0,.08);
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.info-card>div{
-
-display:flex;
-
-align-items:center;
-
-gap:20px;
-
-}
-
-.info-card i{
-
-width:55px;
-
-height:55px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:#edf3ff;
-
-border-radius:15px;
-
-font-size:22px;
-
-color:#4f7cff;
-
-}
-
-.info-card h4{
-
-margin-bottom:5px;
-
+/* Paragraf Narasi */
+p { 
+    color: #cccccc; 
+    text-align: justify; 
+    font-size: 0.95rem; 
+    font-style: italic; 
+    text-indent: 20px;
 }
